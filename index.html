@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bank</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <div class="header__log">
+          <div class="header__logo">
+            <img src="./img/logo.svg" alt="" />
+            <img src="./img/logo-text.svg" alt="" />
+          </div>
+          <div class="header__btns-item">
+            <div class="header__btns">
+              <button type="button" class="header__login button-blue">
+                Вход
+              </button>
+              <button type="button" class="header__singup button-white">
+                Регистрация
+              </button>
+            </div>
+            <div class="header__burger">
+              <span class="header__burger-line"></span
+              ><span class="header__burger-line"></span
+              ><span class="header__burger-line"></span>
+            </div>
+          </div>
+        </div>
+        <div class="header__info">
+          <div class="header__info-text">
+            <h1 class="header__title title">команды мечты создаются здесь</h1>
+            <p class="header__desc desc">
+              помощник в поиске работы и сотрудников в сфере образования
+            </p>
+            <button type="button" class="button-blue header__start">
+              Начать
+            </button>
+          </div>
+          <div class="header__info-img">
+            <img class="header__img" src="./img/main_illustr.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="module">
+      <div class="module__card">
+        <div class="module__close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
+            fill="none"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M14.0303 3.96967C14.3232 4.26256 14.3232 4.73744 14.0303 5.03033L5.03033 14.0303C4.73744 14.3232 4.26256 14.3232 3.96967 14.0303C3.67678 13.7374 3.67678 13.2626 3.96967 12.9697L12.9697 3.96967C13.2626 3.67678 13.7374 3.67678 14.0303 3.96967Z"
+              fill="#515151"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M3.96967 3.96967C4.26256 3.67678 4.73744 3.67678 5.03033 3.96967L14.0303 12.9697C14.3232 13.2626 14.3232 13.7374 14.0303 14.0303C13.7374 14.3232 13.2626 14.3232 12.9697 14.0303L3.96967 5.03033C3.67678 4.73744 3.67678 4.26256 3.96967 3.96967Z"
+              fill="#515151"
+            />
+          </svg>
+        </div>
+        <div class="module__info">
+          <div class="module__for">
+            <div class="module__text-cont">
+              <input name="option" type="radio" id="for-rector" />
+              <p class="module__desc for-r-text desc2">Вход для директора</p>
+            </div>
+            <div class="module__text-cont">
+              <input name="option" type="radio" id="for-sois" />
+              <p class="module__desc for-s-text desc2">Вход для соискателей</p>
+            </div>
+          </div>
+          <div class="module__btns">
+            <button class="button-blue">Продолжить</button>
+            <button class="button-white">Отменить</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cards">
+      <div class="cards__container">
+        <div class="cards__card">
+          <img src="./img/icons.svg" alt="" />
+          <h1 class="cards__title title">67</h1>
+          <p class="cards__desc desc2">предложений о работе</p>
+        </div>
+        <div class="cards__card">
+          <img src="./img/icons (1).svg" alt="" />
+          <h1 class="cards__title title">180</h1>
+          <p class="cards__desc desc2">размещенных резюме</p>
+        </div>
+        <div class="cards__card">
+          <img src="./img/icons (2).svg" alt="" />
+          <h1 class="cards__title title">113</h1>
+          <p class="cards__desc desc2">приглашений на собеседование</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="singin">
+      <div class="singin__container">
+        <div class="singin__card">
+          <div class="singin__text">
+            <h3 class="singin__title desc2">Для работодателей</h3>
+            <p class="singin__desc desc">
+              Доступ к банку резюме предоставляется администрациям школ города
+              Москвы. Если вы являетесь директором московской школы, вы можете
+              войти в банк резюме, используя единую учетную запись ЕКИС.
+            </p>
+            <button class="singin__sing button-blue">Вход</button>
+          </div>
+          <img src="./img/people.png" alt="" />
+        </div>
+        <div class="singin__card">
+          <div class="singin__text">
+            <h3 class="singin__title desc2">Для соискателей</h3>
+            <p class="singin__desc desc">
+              Ваш помощник в поиске работы в московских школах. Бесплатная
+              публикация резюме
+            </p>
+            <button class="singin__sing button-blue">Вход</button>
+
+            <button class="singin__login button-white">Регистрация</button>
+          </div>
+          <img src="./img/people (1).png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <script src="./script/script.js"></script>
+  </body>
+</html>
