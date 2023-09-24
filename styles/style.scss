@@ -165,8 +165,12 @@ $pink: #ff879f;
 .desc2 {
   font-size: 18px;
   font-weight: 600;
-  max-width: 188px;
+  // max-width: 188px;
   color: #515151;
+}
+
+section {
+  margin-top: 40px;
 }
 
 .header {
@@ -323,7 +327,6 @@ $pink: #ff879f;
 }
 
 .cards {
-  margin-top: 80px;
   &__container {
     display: flex;
     justify-content: space-between;
@@ -466,7 +469,7 @@ $pink: #ff879f;
   &__desc {
     font-weight: 400;
     cursor: pointer;
-    min-width: 100%
+    min-width: 100%;
   }
 
   &__btns {
@@ -481,30 +484,43 @@ $pink: #ff879f;
 }
 
 .welcome {
-  margin-top: 80px;
   &__container {
     display: flex;
     background-color: $bgc;
     gap: clamp(3.125rem, -14.905rem + 29.89vw, 12rem);
     align-items: center;
     border-radius: 16px;
-    @media (max-width: 965px){
-        flex-direction: column;
-        align-items: start;
-        gap: 0;
+    @media (max-width: 965px) {
+      flex-direction: column;
+      align-items: start;
+      gap: 0;
+    }
+  }
+
+  &__desctop {
+    @media (max-width: 965px) {
+      display: none;
+    }
+  }
+
+  &__mobile {
+    display: none;
+    @media (max-width: 965px) {
+      display: block;
     }
   }
 
   &__cards {
     padding: 27px 40px 27px 0;
-    @media (max-width: 590px){
-      padding: 27px 0;      
+    @media (max-width: 965px) {
+      padding: 0 0 27px 0;
     }
   }
 
   &__card {
     width: 526px;
-    padding: clamp(0.938rem, -0.469rem + 6.43vw, 1.5rem) clamp(1.25rem, -1.875rem + 14.29vw, 2.5rem);
+    padding: clamp(0.938rem, -0.469rem + 6.43vw, 1.5rem)
+      clamp(1.25rem, -1.875rem + 14.29vw, 2.5rem);
     color: #fff;
     border-radius: 16px;
     &-1 {
@@ -523,13 +539,11 @@ $pink: #ff879f;
       margin-bottom: 18px;
     }
 
-    @media (max-width: 565px){
-        width: 90vw;
+    @media (max-width: 565px) {
+      width: 90vw;
     }
-    @media (max-width: 460px){
-        
+    @media (max-width: 460px) {
     }
-
   }
 
   &__num {
@@ -571,9 +585,225 @@ $pink: #ff879f;
       color: #000;
       margin-bottom: 32px;
       width: 293px;
-      @media (max-width: 965px){
-          width: 100%;
+      @media (max-width: 965px) {
+        width: 100%;
       }
+    }
+    &__btn {
+      @media (max-width: 965px) {
+        width: 526px;
+      }
+      @media (max-width: 565px) {
+        width: 90vw;
+      }
+    }
+  }
+}
+
+.diagnostic {
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 650px) {
+      flex-direction: column;
+      gap: 20px;
+    }
+    @media (max-width: 480px) {
+      text-align: center;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    font-size: 32px;
+    width: 265px;
+  }
+
+  &__mobile {
+    display: none;
+    margin-top: 32px;
+    @media (max-width: 650px) {
+      display: block;
+    }
+  }
+
+  &__mobile-b {
+    @media (max-width: 480px) {
+      width: 100%;
+    }
+  }
+  &__info {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__btn {
+    margin-top: 32px;
+    @media (max-width: 650px) {
+      display: none;
+    }
+  }
+
+  &__time {
+    width: 120px;
+    @media (max-width: 800px) {
+      display: none;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+    align-items: end;
+    gap: 40px;
+    @media (max-width: 1100px) {
+      overflow: scroll;
+    }
+  }
+
+  &__card {
+    background-color: $bgc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: end;
+    min-width: 260px;
+    &-1 {
+      height: 352px;
+      .diagnostic__card-title {
+        margin-bottom: 50px;
+      }
+      img {
+        margin-bottom: 61px;
+        @media (max-width: 1100px) {
+          margin-bottom: 45px;
+        }
+      }
+      @media (max-width: 1100px) {
+        height: 300px;
+      }
+    }
+    &-2 {
+      height: 231px;
+      .diagnostic__card-title {
+        margin-bottom: 50px;
+      }
+      img {
+        margin-bottom: 61px;
+        @media (max-width: 1100px) {
+          margin-bottom: 45px;
+        }
+      }
+      @media (max-width: 1100px) {
+        height: 300px;
+      }
+    }
+    &-3 {
+      height: 190px;
+      .diagnostic__card-title {
+        margin-bottom: 65px;
+      }
+      img {
+        margin-bottom: 46px;
+        @media (max-width: 1100px) {
+          margin-bottom: 45px;
+        }
+      }
+      @media (max-width: 1100px) {
+        height: 300px;
+      }
+    }
+    &-4 {
+      height: 352px;
+      .diagnostic__card-title {
+        margin-bottom: 22px;
+      }
+      img {
+        margin-bottom: 63px;
+        @media (max-width: 1100px) {
+          margin-bottom: 45px;
+        }
+      }
+      @media (max-width: 1100px) {
+        height: 300px;
+      }
+    }
+  }
+
+  &__card-title {
+    font-size: 24px;
+    width: 185px;
+  }
+}
+
+.anons {
+  &__container {
+  }
+
+  &__title {
+  }
+
+  &__cards-1 {
+    gap: 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__cards-2 {
+    gap: 40px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__card {
+    background-color: $bgc;
+    border-radius: 16px;
+  }
+
+  &__data {
+    padding-top: 25px;
+    padding-left: 20px;
+    color: #a0a0a0;
+  }
+
+  &__title-card {
+    padding-top: 12px;
+    padding-left: 20px;
+    max-width: 340px;
+  }
+
+  &__title-card-1 {
+    padding-top: 12px;
+    padding-left: 20px;
+    max-width: 440px;
+  }
+
+  &__desc-1 {
+    padding-top: 6px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+  }
+
+  &__desc {
+    padding-top: 6px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    width: 320px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__showmore {
+    margin-top: 40px;
+    text-align: center;
+    p {
+      cursor: pointer;
+      color: $blue;
     }
   }
 }

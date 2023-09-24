@@ -161,8 +161,11 @@ body.active {
 .desc2 {
   font-size: 18px;
   font-weight: 600;
-  max-width: 188px;
   color: #515151;
+}
+
+section {
+  margin-top: 40px;
 }
 
 .header {
@@ -315,9 +318,6 @@ body.active {
   display: none;
 }
 
-.cards {
-  margin-top: 80px;
-}
 .cards__container {
   display: flex;
   justify-content: space-between;
@@ -463,9 +463,6 @@ body.active {
   }
 }
 
-.welcome {
-  margin-top: 80px;
-}
 .welcome__container {
   display: flex;
   background-color: #f4f9fb;
@@ -480,12 +477,25 @@ body.active {
     gap: 0;
   }
 }
+@media (max-width: 965px) {
+  .welcome__desctop {
+    display: none;
+  }
+}
+.welcome__mobile {
+  display: none;
+}
+@media (max-width: 965px) {
+  .welcome__mobile {
+    display: block;
+  }
+}
 .welcome__cards {
   padding: 27px 40px 27px 0;
 }
-@media (max-width: 590px) {
+@media (max-width: 965px) {
   .welcome__cards {
-    padding: 27px 0;
+    padding: 0 0 27px 0;
   }
 }
 .welcome__card {
@@ -551,4 +561,224 @@ body.active {
   .welcome__info__desc {
     width: 100%;
   }
+}
+@media (max-width: 965px) {
+  .welcome__info__btn {
+    width: 526px;
+  }
+}
+@media (max-width: 565px) {
+  .welcome__info__btn {
+    width: 90vw;
+  }
+}
+
+.diagnostic__head {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 650px) {
+  .diagnostic__head {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .diagnostic__head {
+    text-align: center;
+    align-items: center;
+  }
+}
+.diagnostic__title {
+  font-size: 32px;
+  width: 265px;
+}
+.diagnostic__mobile {
+  display: none;
+  margin-top: 32px;
+}
+@media (max-width: 650px) {
+  .diagnostic__mobile {
+    display: block;
+  }
+}
+@media (max-width: 480px) {
+  .diagnostic__mobile-b {
+    width: 100%;
+  }
+}
+.diagnostic__info {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+}
+.diagnostic__btn {
+  margin-top: 32px;
+}
+@media (max-width: 650px) {
+  .diagnostic__btn {
+    display: none;
+  }
+}
+.diagnostic__time {
+  width: 120px;
+}
+@media (max-width: 800px) {
+  .diagnostic__time {
+    display: none;
+  }
+}
+.diagnostic__content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+  align-items: end;
+  gap: 40px;
+}
+@media (max-width: 1100px) {
+  .diagnostic__content {
+    overflow: scroll;
+  }
+}
+.diagnostic__card {
+  background-color: #f4f9fb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: end;
+  min-width: 260px;
+}
+.diagnostic__card-1 {
+  height: 352px;
+}
+.diagnostic__card-1 .diagnostic__card-title {
+  margin-bottom: 50px;
+}
+.diagnostic__card-1 img {
+  margin-bottom: 61px;
+}
+@media (max-width: 1100px) {
+  .diagnostic__card-1 img {
+    margin-bottom: 45px;
+  }
+}
+@media (max-width: 1100px) {
+  .diagnostic__card-1 {
+    height: 300px;
+  }
+}
+.diagnostic__card-2 {
+  height: 231px;
+}
+.diagnostic__card-2 .diagnostic__card-title {
+  margin-bottom: 50px;
+}
+.diagnostic__card-2 img {
+  margin-bottom: 61px;
+}
+@media (max-width: 1100px) {
+  .diagnostic__card-2 img {
+    margin-bottom: 45px;
+  }
+}
+@media (max-width: 1100px) {
+  .diagnostic__card-2 {
+    height: 300px;
+  }
+}
+.diagnostic__card-3 {
+  height: 190px;
+}
+.diagnostic__card-3 .diagnostic__card-title {
+  margin-bottom: 65px;
+}
+.diagnostic__card-3 img {
+  margin-bottom: 46px;
+}
+@media (max-width: 1100px) {
+  .diagnostic__card-3 img {
+    margin-bottom: 45px;
+  }
+}
+@media (max-width: 1100px) {
+  .diagnostic__card-3 {
+    height: 300px;
+  }
+}
+.diagnostic__card-4 {
+  height: 352px;
+}
+.diagnostic__card-4 .diagnostic__card-title {
+  margin-bottom: 22px;
+}
+.diagnostic__card-4 img {
+  margin-bottom: 63px;
+}
+@media (max-width: 1100px) {
+  .diagnostic__card-4 img {
+    margin-bottom: 45px;
+  }
+}
+@media (max-width: 1100px) {
+  .diagnostic__card-4 {
+    height: 300px;
+  }
+}
+.diagnostic__card-title {
+  font-size: 24px;
+  width: 185px;
+}
+
+.anons__cards-1 {
+  gap: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.anons__cards-2 {
+  gap: 40px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.anons__card {
+  background-color: #f4f9fb;
+  border-radius: 16px;
+}
+.anons__data {
+  padding-top: 25px;
+  padding-left: 20px;
+  color: #a0a0a0;
+}
+.anons__title-card {
+  padding-top: 12px;
+  padding-left: 20px;
+  max-width: 340px;
+}
+.anons__title-card-1 {
+  padding-top: 12px;
+  padding-left: 20px;
+  max-width: 440px;
+}
+.anons__desc-1 {
+  padding-top: 6px;
+  padding-bottom: 30px;
+  padding-left: 20px;
+}
+.anons__desc {
+  padding-top: 6px;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  width: 320px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.anons__showmore {
+  margin-top: 40px;
+  text-align: center;
+}
+.anons__showmore p {
+  cursor: pointer;
+  color: #007db6;
 }/*# sourceMappingURL=style.css.map */
