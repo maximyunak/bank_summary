@@ -24,7 +24,6 @@ login.addEventListener("click", () => {
   module.style.visibility = "visible";
   body.classList.add("active");
   burger.classList.toggle("active");
-  singup.classList.toggle("active");
   buttons.classList.toggle("active");
 });
 
