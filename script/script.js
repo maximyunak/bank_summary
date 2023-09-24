@@ -48,3 +48,33 @@ text1.addEventListener("click", () => {
 text2.addEventListener("click", () => {
   radio2.checked = true;
 });
+
+const moreContent = document.querySelector(".anons__contentmore");
+const moreBtn = document.querySelector(".anons__show-button");
+
+isShow = false;
+
+moreBtn.addEventListener("click", () => {
+  moreContent.classList.toggle("show");
+  moreBtn.classList.toggle("active");
+  isShow = !isShow;
+  isShow
+    ? (moreBtn.innerHTML = `Скрыть`)
+    : (moreBtn.innerHTML = `Смотреть ещё`);
+});
+
+const showBtn = document.querySelectorAll(".connection__show-btn");
+
+isVisible = false;
+
+showBtn.forEach((el) => {
+  el.addEventListener("click", () => {
+    if (isVisible) {
+      el.setAttribute("src", "./img/minus-circle.svg");
+      isVisible = !isVisible;
+    } else {
+      el.setAttribute("src", "./img/plus-circle.svg");
+      isVisible = !isVisible;
+    }
+  });
+});

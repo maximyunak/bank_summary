@@ -407,8 +407,8 @@ section {
   visibility: hidden;
   z-index: 19;
   transition: 0.3s;
-  width: 100vw;
-  height: 100vh;
+  width: 1000vw;
+  height: 1000vh;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -635,7 +635,7 @@ section {
   align-items: end;
   gap: 40px;
 }
-@media (max-width: 1100px) {
+@media (max-width: 1300px) {
   .diagnostic__content {
     overflow: scroll;
   }
@@ -730,20 +730,30 @@ section {
   width: 185px;
 }
 
+.anons__title {
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: clamp(2.188rem, 1.116rem + 5.36vw, 3.125rem);
+}
 .anons__cards-1 {
   gap: 40px;
   display: flex;
   justify-content: space-between;
+  overflow-x: auto;
 }
 .anons__cards-2 {
   gap: 40px;
   margin-top: 40px;
   display: flex;
   justify-content: space-between;
+  overflow: auto;
 }
 .anons__card {
   background-color: #f4f9fb;
   border-radius: 16px;
+}
+.anons__card-1 {
+  min-width: 720px;
 }
 .anons__data {
   padding-top: 25px;
@@ -774,6 +784,12 @@ section {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.anons__show-button {
+  transition: 0.5s;
+}
+.anons__show-button.active {
+  margin-top: 480px;
+}
 .anons__showmore {
   margin-top: 40px;
   text-align: center;
@@ -781,4 +797,14 @@ section {
 .anons__showmore p {
   cursor: pointer;
   color: #007db6;
+}
+.anons__contentmore {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  transition: 0.5s;
+}
+.anons__contentmore.show {
+  visibility: visible;
+  opacity: 1;
 }/*# sourceMappingURL=style.css.map */
