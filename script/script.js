@@ -63,17 +63,23 @@ moreBtn.addEventListener("click", () => {
     : (moreBtn.innerHTML = `Смотреть ещё`);
 });
 
-const showBtn = document.querySelectorAll(".connection__show-btn");
+const showBtn = document.querySelectorAll(".questions__show-btn");
+const showDesc = document.querySelectorAll(".questions__hide");
+const showTitle = document.querySelectorAll('.questions__answer')
 
 isVisible = false;
 
-showBtn.forEach((el) => {
+showBtn.forEach((el, i) => {
   el.addEventListener("click", () => {
+    const desc = showDesc[i]
+    const title = showTitle[i]
+    title.classList.toggle('active')
+    desc.classList.toggle('active')
     if (isVisible) {
-      el.setAttribute("src", "./img/minus-circle.svg");
+      el.setAttribute("src", "./img/plus-circle.svg");
       isVisible = !isVisible;
     } else {
-      el.setAttribute("src", "./img/plus-circle.svg");
+      el.setAttribute("src", "./img/minus-circle.svg");
       isVisible = !isVisible;
     }
   });

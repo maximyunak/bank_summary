@@ -575,6 +575,7 @@ section {
 @media (max-width: 965px) {
   .welcome__info__btn {
     width: 526px;
+    margin-bottom: clamp(0.938rem, -0.469rem + 6.43vw, 1.5rem);
   }
 }
 @media (max-width: 565px) {
@@ -819,31 +820,114 @@ section {
   opacity: 1;
 }
 
+.connection {
+  margin-bottom: 100px;
+}
 .connection__consultation {
   display: flex;
   justify-content: space-between;
   background-color: #f4f9fb;
   border-radius: 16px;
-  padding: 60px 194px 55px 60px;
+  padding: 60px clamp(5rem, -10.983rem + 30.81vw, 12.125rem) 55px 60px;
 }
-.connection img {
+.connection__consultation img {
   margin-top: -80px;
 }
+@media (max-width: 840px) {
+  .connection__consultation img {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .connection__consultation {
+    text-align: center;
+    justify-content: center;
+  }
+}
 .connection__title {
-  font-size: 32px;
+  font-size: clamp(1.563rem, -0.1rem + 2.8vw, 2rem);
+}
+@media (max-width: 840px) {
+  .connection__title {
+    font-size: 27px;
+    width: 100%;
+  }
 }
 .connection__desc {
   margin-top: 18px;
   margin-bottom: 32px;
   width: 372px;
 }
+@media (max-width: 480px) {
+  .connection__desc {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .connection__button {
+    width: 100%;
+  }
+}
 .connection__cards {
   margin-top: 40px;
   display: flex;
   justify-content: space-between;
-  gap: 40px;
+  gap: clamp(1.25rem, -4.022rem + 8.7vw, 2.5rem);
+  overflow: auto;
 }
-.connection__questions {
+@media (max-width: 560px) {
+  .connection__cards {
+    display: none;
+  }
+}
+.connection__card {
+  min-width: 300px;
+}
+
+.questions {
+  display: none;
+}
+.questions__container {
   display: flex;
   justify-content: space-between;
+  gap: 40px;
+}
+.questions__question-title {
+  font-size: 32px;
+}
+.questions__question-desc {
+  width: 460px;
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+.questions__answer {
+  margin-bottom: 12px;
+  width: 660px;
+  border: 1px solid #65b2d6;
+  border-radius: 16px;
+  padding: 24px;
+  transition: 0.3s;
+}
+.questions__answer.active {
+  background-color: #f4f9fb;
+  border: none;
+  transition: 0.3s;
+}
+.questions__answer-show {
+  display: flex;
+  justify-content: space-between;
+}
+.questions__show-btn {
+  cursor: pointer;
+}
+.questions__hide {
+  margin-top: 8px;
+  opacity: 0;
+  height: 0;
+  transition: 0.3s;
+}
+.questions__hide.active {
+  opacity: 1;
+  height: auto;
+  transition: 0.3s;
 }/*# sourceMappingURL=style.css.map */
