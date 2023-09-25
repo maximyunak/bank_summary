@@ -506,6 +506,7 @@ section {
 }
 .welcome__card-1 {
   background-color: #ff879f;
+  margin-bottom: 18px;
 }
 .welcome__card-1 p.welcome__num {
   color: #ff879f;
@@ -516,8 +517,17 @@ section {
 .welcome__card-2 p.welcome__num {
   color: #65b2d6;
 }
-.welcome__card:first-child {
-  margin-bottom: 18px;
+.welcome__card-3 {
+  background-color: #f0d075;
+}
+.welcome__card-3 p.welcome__num {
+  color: #f0d075;
+}
+.welcome__card-4 {
+  background-color: #ff879f;
+}
+.welcome__card-4 p.welcome__num {
+  color: #ff879f;
 }
 @media (max-width: 565px) {
   .welcome__card {
@@ -807,4 +817,33 @@ section {
 .anons__contentmore.show {
   visibility: visible;
   opacity: 1;
+}
+
+.connection__consultation {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f4f9fb;
+  border-radius: 16px;
+  padding: 60px 194px 55px 60px;
+}
+.connection img {
+  margin-top: -80px;
+}
+.connection__title {
+  font-size: 32px;
+}
+.connection__desc {
+  margin-top: 18px;
+  margin-bottom: 32px;
+  width: 372px;
+}
+.connection__cards {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+.connection__questions {
+  display: flex;
+  justify-content: space-between;
 }/*# sourceMappingURL=style.css.map */

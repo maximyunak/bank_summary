@@ -525,6 +525,7 @@ section {
     border-radius: 16px;
     &-1 {
       background-color: $pink;
+      margin-bottom: 18px;
       p.welcome__num {
         color: $pink;
       }
@@ -535,8 +536,17 @@ section {
         color: $hover;
       }
     }
-    &:first-child {
-      margin-bottom: 18px;
+    &-3 {
+      background-color: #f0d075;
+      p.welcome__num {
+        color: #f0d075;
+      }
+    }
+    &-4 {
+      background-color: $pink;
+      p.welcome__num {
+        color: $pink;
+      }
     }
 
     @media (max-width: 565px) {
@@ -804,7 +814,7 @@ section {
   }
 
   &__show-button {
-    transition: .5s;
+    transition: 0.5s;
     &.active {
       margin-top: 480px;
     }
@@ -827,5 +837,83 @@ section {
   &__contentmore.show {
     visibility: visible;
     opacity: 1;
+  }
+}
+
+.connection {
+  &__container {
+  }
+
+  &__consultation {
+    display: flex;
+    justify-content: space-between;
+    background-color: $bgc;
+    border-radius: 16px;
+    padding: 60px 194px 55px 60px;
+  }
+
+  img {
+    margin-top: -80px;
+  }
+
+  &__title {
+    font-size: 32px;
+  }
+
+  &__desc {
+    margin-top: 18px;
+    margin-bottom: 32px;
+    width: 372px;
+  }
+
+  &__cards {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  &__card {
+  }
+
+  &__questions {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__question {
+  }
+
+  &__question-title {
+  }
+
+  &__question-desc {
+  }
+
+  &__button-q {
+  }
+
+  &__answers {
+  }
+
+  &__answer {
+  }
+
+  &__answer-show {
+    
+  }
+
+  &__answer-text {
+  }
+
+  &__show-btn {
+  }
+
+  &__hide {
+  }
+  &__button {
+  }
+
+  &__card {
   }
 }
