@@ -3,7 +3,7 @@ const header = document.querySelector(".header");
 const burger = document.querySelector(".header__burger");
 const buttons = document.querySelector(".header__btns");
 const singup = document.querySelector(".header__singup");
-const body = document.querySelector("body");
+const body = document.body;
 
 burger.addEventListener("click", () => {
   burger.classList.toggle("active");
@@ -15,6 +15,7 @@ burger.addEventListener("click", () => {
 const login = document.querySelector(".header__login");
 const module = document.querySelector(".module");
 const close = document.querySelector(".module__close");
+const card = document.querySelector(".module__card");
 
 module.style.opacity = "0";
 module.style.visibility = "hidden";
@@ -31,6 +32,18 @@ close.addEventListener("click", () => {
   module.style.opacity = "0";
   module.style.visibility = "hidden";
   body.classList.remove("active");
+});
+
+card.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
+body.addEventListener("click", (e) => {
+  if (e.target !== login && e.target !== card) {
+    module.style.opacity = "0";
+    module.style.visibility = "hidden";
+    body.classList.remove("active");
+  }
 });
 
 const radio1 = document.querySelector("#for-rector");
@@ -65,22 +78,57 @@ moreBtn.addEventListener("click", () => {
 
 const showBtn = document.querySelectorAll(".questions__show-btn");
 const showDesc = document.querySelectorAll(".questions__hide");
-const showTitle = document.querySelectorAll('.questions__answer')
+const showTitle = document.querySelectorAll(".questions__answer");
+const showContent = document.querySelectorAll(".questions__answer-show");
 
-isVisible = false;
-
-showBtn.forEach((el, i) => {
+showContent.forEach((el, i) => {
   el.addEventListener("click", () => {
-    const desc = showDesc[i]
-    const title = showTitle[i]
-    title.classList.toggle('active')
-    desc.classList.toggle('active')
+    const desc = showDesc[i];
+    const title = showTitle[i];
+    title.classList.toggle("active");
+    desc.classList.toggle("active");
+
+    const isVisible = showBtn[i].getAttribute("data-visible") === "true";
+
     if (isVisible) {
-      el.setAttribute("src", "./img/plus-circle.svg");
-      isVisible = !isVisible;
+      showBtn[i].setAttribute("src", "./img/plus-circle.svg");
+      showBtn[i].setAttribute("data-visible", "false");
     } else {
-      el.setAttribute("src", "./img/minus-circle.svg");
-      isVisible = !isVisible;
+      showBtn[i].setAttribute("src", "./img/minus-circle.svg");
+      showBtn[i].setAttribute("data-visible", "true");
     }
   });
+});
+
+const module2Btn = document.querySelector(".questions__button-q");
+const module2Btn2 = document.querySelector(".module2__btn");
+const module2 = document.querySelector(".module2");
+const module2Close = document.querySelector(".module2__close");
+const module2Card = document.querySelector(".module2__card");
+
+function openModal() {
+  module2.style.opacity = "1";
+  module2.style.visibility = "visible";
+  body.classList.add("active");
+}
+
+module2Btn.addEventListener("click", () => openModal());
+module2Btn2.addEventListener("click", () => openModal());
+
+module2Close.addEventListener("click", () => {
+  module2.style.opacity = "0";
+  module2.style.visibility = "hidden";
+  body.classList.remove("active");
+});
+
+body.addEventListener("click", (event) => {
+  if (event.target !== module2Btn && event.target !== module2Card) {
+    module2.style.opacity = "0";
+    module2.style.visibility = "hidden";
+    body.classList.remove("active");
+  }
+});
+
+module2Card.addEventListener("click", (e) => {
+  e.stopPropagation();
 });
