@@ -1,7 +1,7 @@
 const header = document.querySelector(".header");
 
 const burger = document.querySelector(".header__burger");
-const buttons = document.querySelector(".header__btns");
+const buttons = document.querySelector(".header__mobile");
 const singup = document.querySelector(".header__singup");
 const body = document.body;
 
@@ -10,6 +10,7 @@ burger.addEventListener("click", () => {
   singup.classList.toggle("active");
   buttons.classList.toggle("active");
   body.classList.toggle("active");
+  header.classList.toggle("active");
 });
 
 const login = document.querySelector(".header__login");
@@ -26,24 +27,14 @@ login.addEventListener("click", () => {
   body.classList.add("active");
   burger.classList.toggle("active");
   buttons.classList.toggle("active");
+  module.setAttribute("data-visible", "true");
 });
 
 close.addEventListener("click", () => {
   module.style.opacity = "0";
   module.style.visibility = "hidden";
   body.classList.remove("active");
-});
-
-card.addEventListener("click", (e) => {
-  e.stopPropagation();
-});
-
-body.addEventListener("click", (e) => {
-  if (e.target !== login && e.target !== card) {
-    module.style.opacity = "0";
-    module.style.visibility = "hidden";
-    body.classList.remove("active");
-  }
+  module.setAttribute("data-visible", "false");
 });
 
 const radio1 = document.querySelector("#for-rector");
@@ -110,6 +101,7 @@ function openModal() {
   module2.style.opacity = "1";
   module2.style.visibility = "visible";
   body.classList.add("active");
+  module2.setAttribute("data-visible", "true");
 }
 
 module2Btn.addEventListener("click", () => openModal());
@@ -119,12 +111,32 @@ module2Close.addEventListener("click", () => {
   module2.style.opacity = "0";
   module2.style.visibility = "hidden";
   body.classList.remove("active");
+  module2.setAttribute("data-visible", "false");
 });
 
 body.addEventListener("click", (event) => {
-  if (event.target !== module2Btn && event.target !== module2Card) {
+  if (
+    event.target !== module2Btn &&
+    event.target !== module2Btn2 &&
+    event.target !== module2Card &&
+    event.target !== login &&
+    !header.classList.contains('active')
+  ) {
     module2.style.opacity = "0";
     module2.style.visibility = "hidden";
+    module2.setAttribute("data-visible", "false");
+    module.style.opacity = "0";
+    module.style.visibility = "hidden";
+    module.setAttribute("data-visible", "false");
+    body.classList.remove('active')
+    
+  }
+  if (module2.getAttribute("data-visible") === "true") {
+    body.classList.add("active");
+  } else if (
+    module2.getAttribute("data-visible") === "true" &&
+    !burger.classList.contains("active")
+  ) {
     body.classList.remove("active");
   }
 });
@@ -132,3 +144,8 @@ body.addEventListener("click", (event) => {
 module2Card.addEventListener("click", (e) => {
   e.stopPropagation();
 });
+
+card.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+

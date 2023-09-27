@@ -170,6 +170,25 @@ section {
 
 .header {
   background-color: #f4f9fb;
+  transition: background-color 13s;
+}
+.header::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+.header.active::before {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
 }
 .header__log {
   display: flex;
@@ -186,27 +205,6 @@ section {
   display: flex;
   gap: 20px;
   align-items: center;
-}
-@media (max-width: 500px) {
-  .header__btns {
-    position: absolute;
-    left: -1000px;
-    transition: 0.3s;
-  }
-  .header__btns.active {
-    top: 0;
-    left: 0;
-    z-index: 1;
-    background-color: #007db6;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    padding-top: 50px;
-  }
-}
-.header__singup.active {
-  color: #fff;
 }
 .header__info {
   display: flex;
@@ -280,6 +278,49 @@ section {
     transform: scale(0.7);
   }
 }
+@media (max-width: 500px) {
+  .header__desctop {
+    display: none;
+  }
+}
+.header__list {
+  font-size: 13px;
+  padding-bottom: 24px;
+}
+.header__list:last-child {
+  margin-bottom: 0;
+}
+.header__mobile {
+  display: none;
+}
+.header__mobile-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 40px;
+  font-size: 14px;
+}
+@media (max-width: 500px) {
+  .header__mobile {
+    position: absolute;
+    display: block;
+    right: -1000px;
+    top: -1000px;
+    transition: 0.3s;
+  }
+  .header__mobile.active {
+    top: 0px;
+    right: 0;
+    z-index: 1;
+    background-color: #fff;
+    width: 296px;
+    display: flex;
+    flex-direction: column;
+    padding: 75px 40px 40px 40px;
+    overflow: hidden;
+    border-radius: 0px 0px 0 8px;
+  }
+}
 .header__burger {
   cursor: pointer;
   position: relative;
@@ -302,9 +343,8 @@ section {
 .header__burger.active span {
   z-index: 10;
   position: absolute;
-  left: -40px;
+  left: -30px;
   transform: scale(0);
-  background-color: #fff;
 }
 .header__burger.active span:first-child {
   transform: rotate(-45deg);
@@ -1004,7 +1044,7 @@ section {
 }
 @media (max-width: 600px) {
   .module2__card {
-    max-width: 96vw;
+    width: 93vw;
     padding: 30px 10px 30px 10px;
   }
 }
@@ -1044,7 +1084,7 @@ section {
   cursor: pointer;
 }
 .module2__title {
-  font-size: 32px;
+  font-size: clamp(1.563rem, 1.25rem + 0.83vw, 2rem);
 }
 .module2__desc {
   margin-top: 12px;

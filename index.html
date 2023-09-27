@@ -21,14 +21,44 @@
             <img src="./img/logo-text.svg" alt="" />
           </div>
           <div class="header__btns-item">
-            <div class="header__btns">
-              <button type="button" class="header__login button-blue">
-                Вход
-              </button>
-              <button type="button" class="header__singup button-white">
-                Регистрация
-              </button>
+            <div class="header__desctop">
+              <div class="header__btns">
+                <button type="button" class="header__login button-blue">
+                  Вход
+                </button>
+                <button type="button" class="header__singup button-white">
+                  Регистрация
+                </button>
+              </div>
             </div>
+
+            <div class="click">
+              <div class="header__mobile">
+                <div class="header__mobile-btns">
+                  <button type="button" class="header__login button-blue">
+                    Вход для соискателей
+                  </button>
+                  <button type="button" class="header__login button-blue">
+                    Вход для директора
+                  </button>
+                  <button type="button" class="header__singup button-white">
+                    Регистрация
+                  </button>
+                </div>
+                <div class="header__mobile-info">
+                  <div class="header__list desc">
+                    Пользовательское соглашение
+                  </div>
+                  <div class="header__list desc">Правовая информация</div>
+                  <div class="header__list desc">Контакты</div>
+                  <div class="header__list desc">Помощь (FAQ)</div>
+                  <div class="header__list desc module2__blue">
+                    Пользовательское соглашение
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div class="header__burger">
               <span class="header__burger-line"></span
               ><span class="header__burger-line"></span
@@ -53,7 +83,7 @@
       </div>
     </header>
 
-    <div class="module">
+    <div data-visible="false" class="module">
       <div class="module__card">
         <div class="module__close">
           <svg
@@ -461,7 +491,7 @@
       </div>
     </section>
 
-    <div class="module2">
+    <div class="module2" data-visible="false">
       <div class="module2__card">
         <div class="module2__close">
           <svg
@@ -503,16 +533,15 @@
             <textarea placeholder="Ваша проблема"></textarea>
           </div>
           <div class="module2__check">
-            <input type="checkbox">
-            <p class="module2__checkbox">Согласен на <span class="module2__blue">
-              обработку персональных данных
-            </span></p>
+            <input type="checkbox" />
+            <p class="module2__checkbox">
+              Согласен на
+              <span class="module2__blue"> обработку персональных данных </span>
+            </p>
           </div>
         </div>
         <div class="module2__captcha">
-          <p class="module2__text-c">
-            Подтвердите, что вы не робот
-          </p>
+          <p class="module2__text-c">Подтвердите, что вы не робот</p>
         </div>
         <div>
           <button class="button-blue module2__button">Отправить</button>
