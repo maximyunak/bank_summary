@@ -14,10 +14,12 @@ a,
 a:link,
 a:visited {
   text-decoration: none;
+  color: inherit;
 }
 
 a:hover {
   text-decoration: none;
+  color: inherit;
 }
 
 aside,
@@ -296,6 +298,10 @@ section {
   gap: 12px;
   margin-bottom: 40px;
   font-size: 14px;
+  width: 100%;
+}
+.header__mobile-btns .header__singup {
+  width: 100%;
 }
 @media (max-width: 500px) {
   .header__mobile {

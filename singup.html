@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>singup</title>
+    <link rel="stylesheet" href="./styles/singup.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <div class="header__info">
+          <div class="header__logo">
+            <a href="./index.html">
+              <img src="./img/logo.svg" alt="" />
+              <img src="./img/logo-text.svg" alt="" />
+            </a>
+          </div>
+
+          <div class="header__page1">
+            <div class="header__title title">регистрация</div>
+            <form action="">
+              <div class="header__cont">
+                <p class="header__desc desc">E-mail</p>
+                <input
+                  class="header__input"
+                  type="text"
+                  placeholder="Введите e-mail"
+                />
+              </div>
+              <div class="header__cont">
+                <p class="header__desc desc">Пароль*</p>
+                <input
+                  class="header__input"
+                  type="text"
+                  placeholder="Введите пароль"
+                />
+              </div>
+              <div class="header__cont">
+                <p class="header__desc desc">Повторить пароль*</p>
+                <input
+                  class="header__input"
+                  type="text"
+                  placeholder="Повторите пароль"
+                />
+              </div>
+              <div class="header__check">
+                <input type="checkbox" />
+                <p class="header__checkbox desc">
+                  Я принимаю
+                  <a href="#" class="header__blue">
+                    Пользовательское соглашение
+                  </a>
+                </p>
+              </div>
+            </form>
+            <div class="header__btns">
+              <button class="header__btn button-next button-blue">
+                Продолжить
+              </button>
+              <button class="header__btn button-white">
+                <img src="./img/logo-sm 1.svg" alt="" /> Регистрация через ДПО
+              </button>
+              <div class="header__endtext">
+                <p class="desc">Уже зарегистрированы?</p>
+                <a href="" class="header__blue desc">Вход</a>
+              </div>
+            </div>
+            <div class="header__points">
+              <span class="header__circle active"></span>
+              <span class="header__circle"></span>
+              <span class="header__circle"></span>
+            </div>
+          </div>
+          <div class="header__page2">
+            <div class="header__title title">регистрация</div>
+            <form action="">
+              <div class="header__cont">
+                <p class="header__desc desc">Фамилия*</p>
+                <input
+                  class="header__input"
+                  type="text"
+                  placeholder="Фамилия"
+                />
+              </div>
+              <div class="header__cont">
+                <p class="header__desc desc">Имя*</p>
+                <input class="header__input" type="text" placeholder="Имя" />
+              </div>
+
+              <div class="header__cont">
+                <p class="header__desc desc">Отчество*</p>
+                <input
+                  class="header__input"
+                  type="text"
+                  placeholder="Отчество"
+                />
+              </div>
+              <div class="header__cont">
+                <p class="header__desc desc">Возраст*</p>
+                <input
+                  class="header__input"
+                  type="text"
+                  placeholder="Возраст"
+                />
+              </div>
+              <div class="header__cont">
+                <p class="header__desc desc">Телефон*</p>
+                <input
+                  class="header__input"
+                  type="text"
+                  placeholder="Телефон"
+                />
+              </div>
+              <div class="header__check">
+                <input type="checkbox" />
+                <p class="header__checkbox desc">
+                  Я принимаю
+                  <a href="#" class="header__blue">
+                    Пользовательское соглашение
+                  </a>
+                </p>
+              </div>
+            </form>
+            <div class="header__btns">
+              <button class="header__btn button-next button-blue">
+                Продолжить
+              </button>
+              <button class="header__btn button-prev button-white">
+                Назад
+              </button>
+            </div>
+            <div class="header__points">
+              <span class="header__circle"></span>
+              <span class="header__circle active"></span>
+              <span class="header__circle"></span>
+            </div>
+          </div>
+          <div class="header__page3">
+            <div class="header__title title">регистрация</div>
+            <div class="block">
+              <p class="header__desc desc">Пол</p>
+              <div class="dropdown">
+                <div class="dropdown__value">
+                  <p class="dropdown__answer">Пол</p>
+                  <img
+                    class="dropdown__img"
+                    src="./img/chevron-down.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="dropdown__items">
+                  <div class="dropdown__item">Мужской</div>
+                  <div class="dropdown__item">Женский</div>
+                  <div class="dropdown__item">Не указано</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="block">
+              <p class="header__desc desc">Семейное положение</p>
+              <div class="dropdown">
+                <div class="dropdown__value">
+                  <p class="dropdown__answer">Семейное положение</p>
+                  <img
+                    class="dropdown__img"
+                    src="./img/chevron-down.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="dropdown__items">
+                  <div class="dropdown__item">Холост/Незамужем</div>
+                  <div class="dropdown__item">Женат/Замужем</div>
+                  <div class="dropdown__item">Другое</div>
+                  <div class="dropdown__item">Не указано</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="block">
+              <p class="header__desc desc">Готовность к переезду</p>
+              <div class="dropdown">
+                <div class="dropdown__value">
+                  <p class="dropdown__answer">Готовность к переезду</p>
+                  <img
+                    class="dropdown__img"
+                    src="./img/chevron-down.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="dropdown__items">
+                  <div class="dropdown__item">Готов</div>
+                  <div class="dropdown__item">Не готов</div>
+                  <div class="dropdown__item">Не указано</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="block">
+              <p class="header__desc desc">Место проживания</p>
+              <div class="dropdown">
+                <div class="dropdown__value">
+                  <p class="dropdown__answer">Место проживания</p>
+                  <img
+                    class="dropdown__img"
+                    src="./img/chevron-down.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="dropdown__items">
+                  <div class="dropdown__item">Город</div>
+                  <div class="dropdown__item">Деревня</div>
+                  <div class="dropdown__item">Подвал</div>
+                  <div class="dropdown__item">Не указано</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="header__cont">
+              <p class="header__desc desc">СНИЛС</p>
+              <input class="header__input" type="text" placeholder="СНИЛС" />
+            </div>
+
+            <div class="header__cont">
+              <p class="header__desc desc">Фото профиля</p>
+              <input
+                class="header__input"
+                type="file"
+                placeholder="Фото профиля"
+              />
+            </div>
+            <div class="header__btns">
+              <button class="header__btn button-next button-blue">
+                Зарегистрироваться
+              </button>
+              <button class="header__btn button-prev button-white">
+                Назад
+              </button>
+            </div>
+
+            <div class="header__points">
+              <span class="header__circle"></span>
+              <span class="header__circle"></span>
+              <span class="header__circle active"></span>
+            </div>
+          </div>
+          <div class="header__page4">
+            <div class="header__title title">поздравляем!</div>
+            <p class="header__desc desc">
+              Вы успешно прошли регистрацию. Войдите в Личный кабинет.
+            </p>
+            <div class="header__btns">
+              <button class="header__btn button-next button-blue">Вход</button>
+              <a href="./index.html">
+                <button class="header__btn button-prev button-white">
+                  На главную
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="header__img">
+          <img src="./img/main_illustr.svg" alt="" />
+        </div>
+      </div>
+    </header>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__info">
+          <div class="footer__btn">
+            Служба поддержки
+            <div class="footer__logos footer__mobile">
+              <img src="./img/logo-footer_1.png" alt="" />
+              <img src="./img/logo-footer_2.png" alt="" />
+            </div>
+          </div>
+          <div class="footer__text">
+            <div>
+              <p class="footer__p desc">Пользовательское соглашение</p>
+              <p class="footer__p desc">Правовая информация</p>
+            </div>
+            <div>
+              <p class="footer__p desc">Контакты</p>
+              <p class="footer__p desc">Помощь (FAQ)</p>
+            </div>
+          </div>
+          <div class="footer__logos footer__desctop">
+            <img src="./img/logo-footer_1.png" alt="" />
+            <img src="./img/logo-footer_2.png" alt="" />
+          </div>
+        </div>
+        <div class="footer__copy">
+          <p class="desc">© Департамент образования и науки г. Москвы, 2023</p>
+          <p class="desc">
+            При полном или частичном использовании материалов с официальных
+            сайтов Правительства Москвы ссылка на источник обязательна.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script async src="./script/singup.js"></script>
+  </body>
+</html>
