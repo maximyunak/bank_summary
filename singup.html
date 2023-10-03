@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>singup</title>
+    <title>bank/singup</title>
     <link rel="stylesheet" href="./styles/singup.css" />
   </head>
   <body>
@@ -23,7 +23,7 @@
               <div class="header__cont">
                 <p class="header__desc desc">E-mail</p>
                 <input
-                  class="header__input"
+                  class="header__input email"
                   type="text"
                   placeholder="Введите e-mail"
                 />
@@ -31,16 +31,16 @@
               <div class="header__cont">
                 <p class="header__desc desc">Пароль*</p>
                 <input
-                  class="header__input"
-                  type="text"
+                  class="header__input password"
+                  type="password"
                   placeholder="Введите пароль"
                 />
               </div>
               <div class="header__cont">
                 <p class="header__desc desc">Повторить пароль*</p>
                 <input
-                  class="header__input"
-                  type="text"
+                  class="header__input password"
+                  type="password"
                   placeholder="Повторите пароль"
                 />
               </div>
@@ -63,7 +63,7 @@
               </button>
               <div class="header__endtext">
                 <p class="desc">Уже зарегистрированы?</p>
-                <a href="" class="header__blue desc">Вход</a>
+                <a href="./login.html" class="header__blue desc">Вход</a>
               </div>
             </div>
             <div class="header__points">
@@ -78,18 +78,18 @@
               <div class="header__cont">
                 <p class="header__desc desc">Фамилия*</p>
                 <input
-                  class="header__input"
+                  class="header__input lastname"
                   type="text"
                   placeholder="Фамилия"
                 />
               </div>
               <div class="header__cont">
                 <p class="header__desc desc">Имя*</p>
-                <input class="header__input" type="text" placeholder="Имя" />
+                <input class="header__input name" type="text" placeholder="Имя" />
               </div>
 
               <div class="header__cont">
-                <p class="header__desc desc">Отчество*</p>
+                <p class="header__desc desc surname">Отчество*</p>
                 <input
                   class="header__input"
                   type="text"
@@ -99,7 +99,7 @@
               <div class="header__cont">
                 <p class="header__desc desc">Возраст*</p>
                 <input
-                  class="header__input"
+                  class="header__input age"
                   type="text"
                   placeholder="Возраст"
                 />
@@ -107,7 +107,7 @@
               <div class="header__cont">
                 <p class="header__desc desc">Телефон*</p>
                 <input
-                  class="header__input"
+                  class="header__input phone"
                   type="text"
                   placeholder="Телефон"
                 />
@@ -261,6 +261,7 @@
         </div>
         <div class="header__img">
           <img src="./img/main_illustr.svg" alt="" />
+          <div class="header__bgc"></div>
         </div>
       </div>
     </header>

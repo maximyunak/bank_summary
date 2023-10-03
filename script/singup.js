@@ -103,3 +103,28 @@ prevAll.forEach((prev) => {
       }
   });
 });
+
+
+// inputs 
+
+const passwordInput = document.querySelector('.password')
+const emailInput = document.querySelector('.email')
+
+let password = ''
+let email = ''
+
+
+passwordInput.addEventListener('input', (e) => {
+  password = e.target.value
+})
+
+emailInput.addEventListener('input', (e) => {
+  email = e.target.value
+})
+
+nextAll.forEach((next) => {
+  next.addEventListener('click', () => {
+    localStorage.setItem('password', password)
+    localStorage.setItem('email', email)
+  })
+})

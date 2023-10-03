@@ -184,16 +184,30 @@ section {
     padding-right: 0;
   }
 }
+.header__endtext {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+.header__btn {
+  display: block;
+  width: 100%;
+  margin-bottom: 12px;
+}
+.header__check {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.header__cont-for-checkbox {
+  display: flex;
+  gap: 8px;
+  color: #292929;
+}
 .header__title {
   font-size: 32px;
   padding-top: clamp(2.5rem, 0.372rem + 10.64vw, 7.688rem);
   margin-bottom: 40px;
-}
-.header__cont {
-  margin-bottom: 18px;
-}
-.header__cont:last-child {
-  margin-bottom: 12px;
 }
 .header__desc {
   font-size: 15px;
@@ -204,49 +218,21 @@ section {
   border: 1px solid #a0a0a0;
   width: 400px;
   border-radius: 4px;
+  margin-bottom: 18px;
 }
 @media (max-width: 1100px) {
   .header__input {
     width: 100%;
   }
 }
-.header__btns {
-  margin-top: 42px;
-}
-.header__btn {
-  display: block;
-  width: 100%;
-  margin-bottom: 12px;
-}
-.header__check {
-  display: flex;
-  gap: 8px;
-}
-.header__check .header__blue {
-  text-decoration: underline;
-}
-.header__endtext {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-}
 .header__blue {
   color: #007db6;
 }
-.header__points {
-  display: flex;
-  gap: 40px;
-  justify-content: center;
-  margin-top: 60px;
+.header__error {
+  margin-bottom: 18px;
 }
-.header__circle {
-  width: 10px;
-  height: 10px;
-  background-color: #d0d0d0;
-  border-radius: 50%;
-}
-.header__circle.active {
-  background-color: #007db6;
+.header__login {
+  height: 790px;
 }
 .header__img {
   width: 100%;
@@ -263,79 +249,9 @@ section {
   position: absolute;
   z-index: -2;
   right: 0;
-  height: 1400px;
-  width: clamp(40rem, 4.866rem + 51.1vw, 90.625rem);
-  background-color: #DAF3FF;
-}
-.header__page1 {
-  opacity: 0;
-  visibility: hidden;
-  height: 0;
-  transition: opacity 0.3s;
-}
-.header__page1.active {
-  opacity: 1;
-  visibility: visible;
-  height: 900px;
-}
-@media (max-width: 1100px) {
-  .header__page1.active {
-    height: 800px;
-  }
-}
-.header__page2 {
-  opacity: 0;
-  visibility: hidden;
-  height: 0;
-  transition: opacity 0.3s;
-}
-.header__page2.active {
-  opacity: 1;
-  visibility: visible;
   height: 1000px;
-}
-@media (max-width: 1100px) {
-  .header__page2.active {
-    height: 950px;
-  }
-}
-.header__page3 {
-  opacity: 0;
-  visibility: hidden;
-  height: 0;
-  transition: opacity 0.3s;
-}
-.header__page3.active {
-  opacity: 1;
-  visibility: visible;
-  height: 1050px;
-}
-@media (max-width: 1100px) {
-  .header__page3.active {
-    height: 1000px;
-  }
-}
-.header__page4 {
-  opacity: 0;
-  visibility: hidden;
-  height: 0;
-  transition: opacity 0.3s;
-}
-.header__page4 .header__title {
-  margin-top: 140px;
-}
-.header__page4 .header__desc {
-  max-width: 270px;
-}
-.header__page4.active {
-  opacity: 1;
-  visibility: visible;
-  height: 690px;
-}
-@media (max-width: 1100px) {
-  .header__page4.active {
-    height: 600px;
-  }
+  width: clamp(40rem, 4.866rem + 51.1vw, 90.625rem);
+  background-color: #daf3ff;
 }
 
 .footer {
@@ -433,60 +349,4 @@ section {
 .footer__copy:last-child {
   font-size: 12px;
   margin-top: 4px;
-}
-
-.dropdown {
-  position: relative;
-}
-.dropdown__value {
-  display: flex;
-  justify-content: space-between;
-  padding: 12px;
-  border: 1px solid #a0a0a0;
-  margin-bottom: 18px;
-  border-radius: 4px;
-}
-.dropdown__value img {
-  transition: all 0.2s;
-}
-.dropdown__value img.active {
-  transform: rotate(180deg);
-}
-.dropdown__img.active {
-  transform: rotate(180deg);
-}
-.dropdown__items {
-  position: absolute;
-  top: 90%;
-  left: 0;
-  right: 0;
-  background-color: #DAF3FF;
-  overflow: hidden;
-  border-radius: 5px;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: all 0.2s;
-  z-index: 1;
-}
-.dropdown__items.active {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: all;
-  transform: translateY(10px);
-}
-.dropdown__answer {
-  color: #7a7a7a;
-  font-size: 15px;
-  font-weight: 400;
-}
-.dropdown__answer.active {
-  color: #292929;
-}
-.dropdown__item {
-  padding: 10px;
-  transition: all 0.2s;
-}
-.dropdown__item:hover {
-  background-color: #dadada;
-}/*# sourceMappingURL=singup.css.map */
+}/*# sourceMappingURL=login.css.map */

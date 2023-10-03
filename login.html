@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bank/login</title>
+    <link rel="stylesheet" href="./styles/login.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <div class="header__info">
+          <div class="header__logo">
+            <a href="./index.html">
+              <img src="./img/logo.svg" alt="" />
+              <img src="./img/logo-text.svg" alt="" />
+            </a>
+          </div>
+
+          <div class="header__login">
+            <div class="header__title title">Вход</div>
+            <form action="">
+              <div class="header__cont">
+                <p class="header__desc desc">E-mail</p>
+                <input
+                  class="header__input email"
+                  type="text"
+                  placeholder="Введите e-mail"
+                />
+              </div>
+              <div class="header__cont">
+                <p class="header__desc desc">Пароль</p>
+                <input
+                  class="header__input password"
+                  type="password"
+                  placeholder="Введите пароль"
+                />
+              </div>
+              <h1 class="header__error error"></h1>
+              <div class="header__check">
+                <div class="header__cont-for-checkbox">
+                  <input type="checkbox" />
+                  <p class="header__checkbox desc">Запомнить меня</p>
+                </div>
+                <a href="./restore.html" class="header__blue">Забыли пароль?</a>
+              </div>
+            </form>
+            <div class="header__btns">
+              <button class="header__btn button-next button-blue login">
+                Вход
+              </button>
+              <button class="header__btn button-white">
+                <img src="./img/logo-sm 1.svg" alt="" /> Вход через ДПО
+              </button>
+              <div class="header__endtext">
+                <p class="desc">Не зарегистрированы?</p>
+                <a href="./singup.html" class="header__blue desc"
+                  >Регистрация</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__img">
+          <img src="./img/main_illustr.svg" alt="" />
+          <div class="header__bgc"></div>
+        </div>
+      </div>
+    </header>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__info">
+          <div class="footer__btn">
+            Служба поддержки
+            <div class="footer__logos footer__mobile">
+              <img src="./img/logo-footer_1.png" alt="" />
+              <img src="./img/logo-footer_2.png" alt="" />
+            </div>
+          </div>
+          <div class="footer__text">
+            <div>
+              <p class="footer__p desc">Пользовательское соглашение</p>
+              <p class="footer__p desc">Правовая информация</p>
+            </div>
+            <div>
+              <p class="footer__p desc">Контакты</p>
+              <p class="footer__p desc">Помощь (FAQ)</p>
+            </div>
+          </div>
+          <div class="footer__logos footer__desctop">
+            <img src="./img/logo-footer_1.png" alt="" />
+            <img src="./img/logo-footer_2.png" alt="" />
+          </div>
+        </div>
+        <div class="footer__copy">
+          <p class="desc">© Департамент образования и науки г. Москвы, 2023</p>
+          <p class="desc">
+            При полном или частичном использовании материалов с официальных
+            сайтов Правительства Москвы ссылка на источник обязательна.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script async src="./script/login.js"></script>
+  </body>
+</html>
